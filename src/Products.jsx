@@ -23,7 +23,7 @@ const navigate=useNavigate();
 // Estado para el número de la página activa
 const [activePage, setActivePage] = useState(1);
 
-// Función para calcular el índice inicial y final de los elementos a mostrar
+// Función para calcular el índice inicial y final de los elementos a mostrarme
 const startIndex = (activePage - 1) * itemsPerPage;
 const endIndex = startIndex + itemsPerPage;
 
