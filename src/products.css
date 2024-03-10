@@ -1,0 +1,165 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Define el ancho de las columnas */
+    gap: 5px; /* Espacio entre las cajas */
+  }
+  
+  .item-products {
+    border: 1px solid #ccc; /* Borde para cada elemento */
+    padding: 10px; /* Espacio interno */
+  background-color:white;
+  }
+  
+  .item-products img {
+    width: 100%; /* Ajustar imagen al ancho del contenedor */
+    height: 300px; /* Mantener la proporción de la imagen */
+  }
+  
+  .item-products button {
+    width: 100%; /* Botón ocupa todo el ancho del contenedor */
+  }
+  
+  .categories li {
+    padding: 10px;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.5);
+    color:black /* Blanco con opacidad del 50% */
+  }
+  
+  .categories li.active {
+    background-color: green; /* Color de fondo verde */
+    color: white; /* Texto en color blanco */
+  }
+  
+  .categories li:hover {
+    background-color: rgba(11, 170, 40, 0.2); /* Blanco con opacidad del 80% al hacer hover */
+    opacity: 0.8; /* Opacidad del 80% al hacer hover */
+    color:black;
+  }
+  i{
+color:black;
+margin:2px;
+padding:2px;
+
+  }
+  .passcont{
+margin:5px;
+padding:5px;
+
+
+  }
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .pagination-item {
+    margin: 0 5px;
+    cursor: pointer;
+    color: black; /* Color predeterminado del texto */
+  }
+  
+  .pagination-item:hover {
+    color: white !important; /* Cambiar color al pasar el cursor */
+    background-color: #007bff; /* Cambiar color de fondo al pasar el cursor */
+  }
+  
+  .pagination-item.active {
+    color: #007bff !important; /* Color del texto activo */
+    font-weight: bold; /* Opcional: texto en negrita para el elemento activo */
+  }
+  /* Define la animación */
+
+/* Aplica la animación a los elementos del grid */
+.item-products {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Estilos para el contenedor del grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+/* Estilos para los elementos del grid */
+.item-products {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los botones */
+.btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  transition: transform 0.3s ease
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+.item-products:hover {
+  transform: scale(1.05); /* Scaling the element to 105% on hover */
+}
+
+a{
+  text-decoration: none;}
+/* Default styles for the accordion */
+.Accordion {
+  width: 100%;
+}
+
+.Accordion.Item {
+  margin-bottom: 10px;
+}
+
+.Accordion.Header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.Accordion.Body {
+  padding: 10px;
+  display: none;
+}
+
+/* Show the body when the item is active */
+.Accordion.Item.active .Accordion.Body {
+  display: block;
+}
+
+/* Responsive styles for medium-sized screens and above */
+@media (min-width: 768px) {
+  .col-md-12 {
+    width: 100%;
+  }
+}
+
+/* Responsive styles for large-sized screens and above */
+@media (min-width: 992px) {
+  .col-md-12 {
+    width: 50%;
+    float: left;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+/* Responsive styles for extra-large screens and above */
+@media (min-width: 1200px) {
+  .col-md-12 {
+    width: 33.33%;
+  }
+}

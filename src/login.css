@@ -1,0 +1,69 @@
+.login{
+background-color:white;
+width:60%;
+height:400px;
+margin:100px 0px 100px 0px !important;
+padding:80px;
+border-radius:10px;
+}
+input{
+border:2px solid green !important;
+
+
+}
+label{
+color:green;
+}
+
+.form-row{
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; 
+    
+
+
+}
+.boton{
+margin-top:20px;
+width:100%;
+
+
+}
+.content{
+    background-color: #f0f0f0; /* Color de fondo */
+    background-image: url('https://st3.depositphotos.com/1380903/37503/v/450/depositphotos_375032724-stock-illustration-black-green-modern-material-design.jpg'); /* Imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir toda el área */
+    background-attachment:scroll;
+  }
+  /* Estilos para las alertas */
+.alert {
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    width: 300px;
+    animation-duration: 3s;
+  }
+  
+  .alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+  }
+  
+  .alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+  }
+  
+  /* Animaciones */
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  

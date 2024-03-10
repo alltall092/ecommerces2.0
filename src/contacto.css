@@ -1,0 +1,75 @@
+.contact{
+background-color:white !important;
+    margin: 0 auto; /* Centra horizontalmente */
+    padding: 20px; /* Agrega espaciado interno */
+    width:400px;/* Limita el ancho máximo del formulario */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+    
+  
+  
+
+
+}
+.cont-form{
+margin: 50px;
+padding:10px;
+
+}
+.boton1{
+margin:2px 4px 5px 5px;
+padding: 4px;
+
+
+}
+.form1{
+margin:10px 10px 2px 5px;
+padding:5px;
+
+
+}
+.form2{
+    margin:1px;
+    padding:1px;
+    }
+textarea{
+height: 200px;
+
+}
+/* Estilos base */
+.cont-form {
+    margin-top: 20px;
+  }
+  
+  .contact {
+    padding: 20px;
+    
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form1 {
+    width: 100%;
+  }
+  
+  .boton1 {
+    width: 100%;
+  }
+  
+  /* Media query para dispositivos con un ancho máximo de 768px */
+  @media (max-width: 768px) {
+    .contact {
+      padding: 10px;
+    }
+    
+    .form1 {
+      width: calc(100% - 20px);
+    }
+    
+    .boton1 {
+      width: calc(100% - 20px);
+    }
+  }
+  

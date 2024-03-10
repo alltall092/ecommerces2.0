@@ -1,0 +1,22 @@
+.shadow-bottom {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Define la sombra que deseas aplicar */
+  }
+  .search-container {
+    position: relative;
+    width: 200px; /* Ajusta el ancho según tus necesidades */
+  }
+  
+  .search-container input[type="text"] {
+    width: 100%;
+    padding-right: 30px; /* Ajusta el espacio para el icono */
+  }
+  
+  .search-container i {
+    position: absolute;
+    right: 10px; /* Ajusta la posición del icono */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa; /* Color del icono */
+    cursor: pointer;
+  }
+  

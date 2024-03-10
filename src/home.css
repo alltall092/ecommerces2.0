@@ -1,0 +1,107 @@
+
+.imagencont{
+    background-image: url('https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/blte3a96183964679a2/65ce64e776c8be91d475bf26/computing-20240216-feature-tablets-carousel-xs.png?quality=80&auto=webp');
+    background-repeat:no-repeat;
+    height:100vh;
+    width:100%;
+    background-attachment:scroll;
+    background-attachment: scroll;
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+
+    
+
+}
+.conthome{
+background-color:white;
+
+
+
+}
+.parrafo{
+color:black !important;
+margin:1px 0px 0px 1px;
+padding: 15px;
+
+}
+.parrafo2{
+    color:green!important;
+    margin:100px 0px 0px 0px;
+    padding: 15px;
+    
+    }
+.botones{
+margin:5px;
+padding:1px;
+width:40%;
+
+
+}
+@media screen and (max-width: 768px) {
+    .imagencont {
+        height: 300px; /* Ajusta la altura para pantallas más pequeñas */
+    }
+}
+.item-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Las columnas se ajustarán automáticamente */
+    gap: 20px; /* Espacio entre los elementos de la cuadrícula */
+    padding: 20px; /* Espaciado interior para la cuadrícula */
+    background-color: rgba(255, 255, 255, 0.5); 
+  }
+  
+  .item-home {
+    border: 1px solid #ccc; /* Borde para los elementos de la cuadrícula (opcional) */
+    padding: 10px; /* Espaciado interior para los elementos de la cuadrícula */
+    background-color:white !important;
+  }
+  
+  .item-home img {
+    max-width: 100%; /* Asegura que las imágenes no se desborden de sus contenedores */
+    height: auto; /* Permite que las imágenes mantengan su relación de aspecto */
+  
+
+}
+hr{
+color:green !important;
+
+}  
+.cat-container{
+background-color:white;
+height: 400px;
+width:100%;
+margin-bottom:30px;
+
+
+
+}
+
+/* Estilos generales */
+.cat-container {
+    padding: 20px;
+  }
+  
+  .cat-item {
+    margin-bottom: 20px;
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .img-cat {
+    max-width: 100%;
+    height: auto;
+  }
+  
+ 
+  
+  /* Media queries para dispositivos móviles */
+  @media only screen and (max-width: 768px) {
+    .col-md-6 {
+      width: 100%;
+    }
+
+  
+  }  
+  
+ 

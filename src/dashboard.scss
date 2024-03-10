@@ -1,0 +1,234 @@
+/* The side navigation menu */
+.sidebar {
+	margin: 0;
+	padding: 0;
+	width: 250px;
+	background-color:white;
+	position: fixed;
+	height: 100%;
+	overflow: auto;
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
+	display: block;
+	color: black;
+	padding: 16px;
+	text-decoration: none;
+  }
+  
+  /* Active/current link */
+  .sidebar a.active {
+	background-color: #04AA6D;
+	color: white;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+	background-color:blue;
+	color: white;
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  div.contener {
+	margin-left: 200px;
+	padding: 1px 16px;
+	height: 1000px;
+  }
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+	.sidebar {
+	  width: 100%;
+	  height: auto;
+	  position: relative;
+	}
+	.sidebar a {float: left;}
+	div.contener{margin-left: 0;}
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+	.sidebar a {
+	  text-align: center;
+	  float: none;
+	}
+  }
+  
+ .cont-dash{
+display:flex;
+flex-direction:row;
+
+}
+
+.item-dash{
+height: 200px;
+width:100%;
+background-color:white;
+margin: 5px 0px 5px 25px;
+padding: 5px;
+box-shadow:4px 4px 4px rgba(0,0,0,0.2);
+flex-grow:2;
+flex-basis: auto;
+border-radius:20px;
+
+
+
+}
+
+.cont-dash1{
+margin:0 auto;
+padding: 0px;
+
+}
+.cambio{
+background-color:lightgray;
+
+
+}
+.grafico{
+margin:0px 10px 0 20px;
+padding:5px;
+
+}
+.cont-search{
+display:flex;
+flex-direction: row;
+justify-content: flex-end;
+
+
+
+}
+.item-search{
+width:97%;
+
+
+}
+.data-table{
+margin:15px;
+padding: 15px;
+
+
+
+}
+/* Estilos para dispositivos grandes */
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+}
+
+.cont-dash {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.item-dash {
+    width: 30%; /* Ajusta el ancho de los elementos según sea necesario */
+    height: 200px; /* Ajusta la altura de los elementos según sea necesario */
+    margin-bottom: 20px;
+}
+
+.chart-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chart-col {
+    width: 50%; /* Cada columna ocupa el 50% del ancho en dispositivos grandes */
+}
+
+.data-table {
+    width: 100%;
+}
+
+/* Estilos para dispositivos medianos */
+@media (max-width: 992px) {
+    .cont-dash .item-dash {
+        width: 45%; /* Reducir el ancho de los elementos en dispositivos medianos */
+    }
+
+    .chart-col {
+        width: 100%; /* Las columnas ocupan el 100% del ancho en dispositivos medianos */
+    }
+}
+
+/* Estilos para dispositivos pequeños */
+@media (max-width: 768px) {
+    .cont-dash .item-dash {
+        width: 100%; /* Los elementos ocupan el 100% del ancho en dispositivos pequeños */
+    }
+}
+.container.prod-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Crea una cuadrícula con columnas automáticas que se ajustan al tamaño de la ventana */
+    gap: 20px; /* Espacio entre los elementos */
+   
+    padding: 20px; /* Espaciado interno */
+}
+
+.prod-item {
+    text-align: center; /* Centra el contenido */
+    border: 1px solid #ccc; /* Borde gris */
+    padding: 10px; /* Espaciado interno */
+	background-color: #ffffff; /* Fondo blanco */
+	margin: 20px;
+	
+}
+
+.prod-item img {
+    max-width: 100%; /* Imágenes al 100% del ancho del contenedor */
+    height: auto; 
+	margin: 10px;/* Altura automática */
+	padding: 10px;
+
+	
+}
+
+.parra {
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+}
+
+/* Media query para dispositivos pequeños */
+@media (max-width: 768px) {
+    .container.prod-cont {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Cambia el tamaño de las columnas en dispositivos pequeños */
+    }
+}
+.botton-cont {
+    display: flex;
+    justify-content: flex-start;
+}
+.cont-tabla {
+    margin: 40px; /* Agrega márgenes exteriores */
+    padding: 40px; /* Agrega relleno interno */
+}
+
+/* Para hacer el DataTable responsive, puedes envolverlo en un contenedor con un ancho máximo */
+.cont-tabla .dataTables_wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* Para hacer que las celdas se ajusten al contenido en dispositivos pequeños */
+.cont-tabla .dataTable td,
+.cont-tabla .dataTable th {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+	
+}
+.color{
+background-color:#2196f3;
+
+}
+.color1{
+background-color:#ff0000;
+
+
+
+}
+.color2{
+background-color:#4b1c71;
+}

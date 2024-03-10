@@ -1,0 +1,45 @@
+.register{
+background-color:white;
+width:60%;
+height: auto;
+margin: 200px 0px 40px 0px;
+padding: 90px;
+border-radius:10px;
+
+
+
+}
+.botton{
+width:100%;
+margin:15px 5px 10px 5px;
+padding:15px;
+height: 50px;
+
+
+}
+
+.control{
+margin: 5px;
+padding: 10px;
+
+}
+.content{
+margin:10px;
+padding: 10px;
+
+
+}
+
+.control2{
+    margin: 5px;
+    padding: 5px;
+    
+    }
+.form-row{
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; 
+    
+
+
+}
