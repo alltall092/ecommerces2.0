@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
-
+import Swal from 'sweetalert2'; // Import SweetAlert2
 const AgregarProducts=()=>{
 const [titulo,setTitulo]=useState("");
 const [price,setPrice]=useState(null);
@@ -32,8 +32,24 @@ const enviar= async(e)=>{
     formData.append('description', description);
     formData.append('categoryId', categoryId);
  
-axios.post('http://localhost:8000/api/v1/products',formData).then(response => {
+axios.post('https://app-de09ef91-f7ca-4a51-89e3-baf187d73079.cleverapps.io/api/v1/products',formData).then(response => {
             console.log(response.data);
+            // Show a success message using SweetAlert2
+    Swal.fire({
+      icon: 'success',
+      title: 'Success!',
+      text: 'Product added successfully!',
+    });
+          }).catch(error => {
+            // If there's an error, handle it
+            console.error('Error adding product:', error);
+        
+            // Show an error message using SweetAlert2
+            Swal.fire({
+              icon: 'error',
+              title: 'Error!',
+              text: 'Failed to add product. Please try again later.',
+            });
           });
  
     

@@ -21,7 +21,7 @@ const navigate=useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('user'));
   useEffect(()=>{
 
-axios.get('http://localhost:8000/api/v1/cart').then(res=>setItem(res.data.flat()));
+axios.get('https://app-de09ef91-f7ca-4a51-89e3-baf187d73079.cleverapps.io/api/v1/cart').then(res=>setItem(res.data.flat()));
 
 
   },[]);
@@ -54,7 +54,7 @@ updateQty(id,quantity-1);
 
 const checkOut=()=>{
 
-axios.post('http://localhost:8000/api/v1/checkout',{total,item}).then((res)=>{
+axios.post('https://app-de09ef91-f7ca-4a51-89e3-baf187d73079.cleverapps.io/api/v1/checkout',{total,item}).then((res)=>{
   if (res.data.url) {
     window.location.assign(res.data.url).catch(err=>console.log('error del pago',err));
   }
@@ -73,12 +73,12 @@ const logout=()=>{
 }
 const eliminarCart=(id)=>{
 
-axios.delete(`http://localhost:8000/api/v1/deletecart/${id}`).then(()=>console.log('eliminado con exito')).catch(err=>console.log('error la eliminar'));
+axios.delete(`https://app-de09ef91-f7ca-4a51-89e3-baf187d73079.cleverapps.io/api/v1/deletecart/${id}`).then(()=>console.log('eliminado con exito')).catch(err=>console.log('error la eliminar'));
 
 }
 const eliminarTodoCart=()=>{
 
-axios.delete('http://localhost:8000/api/v1/deletetodocart').then(()=>console.log('eliminado con exito')).catch(err=>console.log('error al eliminar'))
+axios.delete('https://app-de09ef91-f7ca-4a51-89e3-baf187d73079.cleverapps.io/api/v1/deletetodocart').then(()=>console.log('eliminado con exito')).catch(err=>console.log('error al eliminar'))
 
 
 }
@@ -149,7 +149,7 @@ return(<>
 
 <tr>
   <td>
-<img src={p.url} height="80" width="70"/>
+<img src={p.url} height="100" width="100"/>
 
 </td>
 <td>

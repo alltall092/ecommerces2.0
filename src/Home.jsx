@@ -18,7 +18,7 @@ const navigate=useNavigate();
 
 useEffect(()=>{
 
-axios.get('http://localhost:8000/api/v1/recientes').then(res=>setDatos(res.data.flat()));
+axios.get('https://app-de09ef91-f7ca-4a51-89e3-baf187d73079.cleverapps.io/api/v1/recientes').then(res=>setDatos(res.data.flat()));
 
 },[]);
 

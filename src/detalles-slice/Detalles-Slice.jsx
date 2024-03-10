@@ -22,7 +22,7 @@ state.productId=productById;
     },
   })
   export const getProductsById=()=>dispatch=>{
-    axios.get('http://localhost:8000/api/v1/products/').then(res=>
+    axios.get('https://app-de09ef91-f7ca-4a51-89e3-baf187d73079.cleverapps.io/api/v1/products/').then(res=>
     dispatch(setProducts(res.data.flat()))).catch(error=>console.log(error.response))
 
 }

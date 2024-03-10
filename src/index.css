@@ -12,6 +12,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 
 a {
   font-weight: 500;
@@ -23,6 +28,10 @@ a:hover {
 }
 body{
 background-image: url('https://img.freepik.com/vector-gratis/fondo-monocromatico-blanco-estilo-papel_52683-66443.jpg');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-color:#dcdcdc !important;
 
 
 }

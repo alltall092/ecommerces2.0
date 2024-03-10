@@ -13,7 +13,7 @@ const Registrarse=()=>{
       } = useForm();
 const enviar=(datos)=>{
 console.log(datos);
-axios.post('http://localhost:8000/api/v1/register',datos).then((res) => {
+axios.post('https://app-de09ef91-f7ca-4a51-89e3-baf187d73079.cleverapps.io/api/v1/register',datos).then((res) => {
     Swal.fire({
       icon: 'success',
       title: 'Éxito',

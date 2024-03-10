@@ -18,7 +18,8 @@ const [filter,setFilter]=useState([]);
 const [precio1,setPrecio1]=useState(null);
 const [precio2,setPrecio2]=useState(null);
 const [search,setSearch]=useState("");
-const itemsPerPage = 3;
+const [item,setItem]=useState([]);
+const itemsPerPage = 6;
 const navigate=useNavigate();
 // Estado para el número de la página activa
 const [activePage, setActivePage] = useState(1);
@@ -45,15 +46,27 @@ getProducts();
 
 
 },[]);
+useEffect(()=>{
+
+ getItem();
+  
+    },[]);
+const getItem=()=>{
+
+  axios.get('https://app-de09ef91-f7ca-4a51-89e3-baf187d73079.cleverapps.io/api/v1/cart').then(res=>setItem(res.data.flat()));
+  
+
+}
+
 const getProducts=()=>{
 
-  axios.get('http://localhost:8000/api/v1/products').then(res=>setDatos(res.data));
+  axios.get('https://app-de09ef91-f7ca-4a51-89e3-baf187d73079.cleverapps.io/api/v1/products').then(res=>setDatos(res.data));
 
 }
 
 useEffect(()=>{
 
-    axios.get('http://localhost:8000/api/v1/categories').then(res=>setCategories(res.data));
+    axios.get('https://app-de09ef91-f7ca-4a51-89e3-baf187d73079.cleverapps.io/api/v1/categories').then(res=>setCategories(res.data));
     
     
     },[datos]);
@@ -82,8 +95,8 @@ setFilter(searchFilter);
 
   const addCart=(productId)=>{
 
-axios.post('http://localhost:8000/api/v1/cart',{productId}).then(()=>{
-  console.log('Agregado con éxito');
+axios.post('https://app-de09ef91-f7ca-4a51-89e3-baf187d73079.cleverapps.io/api/v1/cart',{productId}).then(()=>{
+  getItem();
   // Mostrar una alerta utilizando SweetAlert2
   Swal.fire({
       icon: 'success',
@@ -91,7 +104,7 @@ axios.post('http://localhost:8000/api/v1/cart',{productId}).then(()=>{
       showConfirmButton: false,
       timer: 1500
   });
-  getProducts();
+
 }).catch(error => {
   console.error('Error al agregar al carrito:', error);
   // Mostrar una alerta de error utilizando SweetAlert2
@@ -216,7 +229,7 @@ return n;
       <div className="item-products">
         <a href="#" onClick={()=>ProductsById(x.id)} style={{textDecoration:"none"}}>
         <img src={x.url}  alt="imagenes" />
-        <h2>{x.titulo}</h2>
+        <h6>{x.titulo}</h6>
         </a>
         <p className="parra">{"RD$"+x.precio}</p>
        

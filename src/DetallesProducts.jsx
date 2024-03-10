@@ -30,7 +30,7 @@ const handleColorChange = (color, pic) => {
 };
 const addCart=(productId)=>{
 
-    axios.post('http://localhost:8000/api/v1/cart',{productId}).then(()=>{
+    axios.post('https://app-de09ef91-f7ca-4a51-89e3-baf187d73079.cleverapps.io/api/v1/cart',{productId}).then(()=>{
       console.log('Agregado con éxito');
       // Mostrar una alerta utilizando SweetAlert2
       Swal.fire({

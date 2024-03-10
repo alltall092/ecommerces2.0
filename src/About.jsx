@@ -1,45 +1,23 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import './about.css';
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 import ScrollReveal from 'scrollreveal';
+import { Fade } from "react-awesome-reveal";
+import { useInView } from "react-intersection-observer";
 const About=()=>{
 
+ 
+  const [isVisible, setIsVisible] = useState(false);
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Only trigger once
+    threshold: 0.5 // 50% of the component visible in the viewport
+  });
   useEffect(() => {
-    // Configuración de ScrollReveal
-    ScrollReveal().reveal('.animated', {
-      delay: 300,
-      duration: 1000,
-      distance: '50px',
-      origin: 'bottom',
-      easing: 'ease-in-out',
-      reset: true
-    });
-  }, []);
-  useEffect(() => {
-    // Configuración de ScrollReveal
-    ScrollReveal().reveal('.animacion', {
-      delay: 300,
-      duration: 1000,
-      distance: '50px',
-      origin: 'left',
-      easing: 'linear',
-      reset: true
-    });
-  }, []);
-  useEffect(() => {
-    // Configuración de ScrollReveal
-    ScrollReveal().reveal('.animation', {
-      delay: 300,
-      duration: 1000,
-      distance: '100px',
-      origin: 'right',
-      easing: 'linear',
-      reset: true
-    });
-  }, []);
-
-  
+    if (inView) {
+      setIsVisible(true);
+    }
+  }, [inView]);
 
     return(<>
     <Header/>
@@ -54,8 +32,13 @@ const About=()=>{
 </div>
 
     <main>
-    <section className="about-section animated">
+    <section className="about-section animated"  ref={ref}>
+       {isVisible && (
+        <Fade direction="down" triggerOnce={true}>
+    
     <h2  className="animated" style={{textAlign:"center"}}>Nuestra Historia en el Mundo del E-commerce</h2>
+</Fade >
+)}
 <hr/>
       <div className="row">
       <div className="col-md-6">
